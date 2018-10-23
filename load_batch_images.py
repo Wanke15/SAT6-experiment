@@ -1,8 +1,9 @@
+from skimage import io as skio
+
 def read_single(f):
     '''
     Read single image.
     '''
-    from skimage import io as skio
     rgb=skio.imread(f)
     return rgb
     
@@ -12,7 +13,6 @@ def load_batch_images(data_dir):
     Note: make sure all images are the same size. 
     Supports jpg and png format.
     '''
-    from skimage import io as skio
     assert data_dir.endswith('/'), 'data_file should end with "/"'
     img_str = data_dir + '*.jpg' + ':' + data_dir + '*.png'
     image_collection = skio.ImageCollection(img_str, load_func=read_single)
