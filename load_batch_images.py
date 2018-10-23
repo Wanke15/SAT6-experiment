@@ -1,4 +1,5 @@
 from skimage import io as skio
+#skimage.__version__ == '0.13.0'
 
 def read_single(f):
     '''
