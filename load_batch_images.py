@@ -4,8 +4,8 @@ def read_single(f):
     '''
     Read single image.
     '''
-    rgb=skio.imread(f)
-    return rgb
+    img=skio.imread(f)
+    return img
     
 def load_batch_images(data_dir):
     '''
